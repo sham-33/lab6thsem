@@ -1,0 +1,21 @@
+# - write a program to develop simple single layer perceptron to implement and, or boolean functions.
+
+from sklearn.linear_model import perceptron
+
+def perceptron_logic_gate(gate='and'):
+    if gate == 'and':
+        x = [[0,0],[0,1],[1,0],[1,1]]
+        y = [0,0,0,1]
+    elif gate == 'or':
+        x = [[0,0],[0,1],[1,0],[1,1]]
+        y = [0,1,1,1]
+
+    model = perceptron()
+    model.fit(x, y)
+
+    print(f"{gate} gate prediction:")
+    for x in x:
+        print(f"{x} -> {model.predict([x])[0]}")
+
+perceptron_logic_gate('and')
+perceptron_logic_gate('or')

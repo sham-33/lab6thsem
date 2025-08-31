@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Feedback</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f8f9fa;
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 24px 20px 20px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 18px;
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 4px 0;
+      font-size: 1em;
+      color: #222;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+      background: #fafbfc;
+      box-sizing: border-box;
+      transition: border 0.2s;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    select:focus,
+    textarea:focus {
+      border: 1.5px solid #4CAF50;
+      outline: none;
+      background: #fff;
+    }
+
+    .radio-group, .checkbox-group {
+      margin-bottom: 10px;
+    }
+    .radio-group label,
+    .checkbox-group label {
+      display: inline-block;
+      margin-right: 15px;
+      font-weight: normal;
+      font-size: 0.98em;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1.1em;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.2s;
+    }
+    input[type="submit"]:hover {
+      background: #388e3c;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Feedback</h2>
+    <form>
+      <label for="fname">Full Name</label>
+      <input type="text" id="fname" name="fullname" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="usn">USN</label>
+      <input type="text" id="usn" name="usn" required>
+
+      <label for="sem">Semester</label>
+      <select id="sem" name="semester" required>
+        <option value="">--Select--</option>
+        <option>1</option><option>2</option><option>3</option><option>4</option>
+        <option>5</option><option>6</option><option>7</option><option>8</option>
+      </select>
+
+      <label>Branch</label>
+      <div class="radio-group">
+        <label><input type="radio" name="branch" value="CSE" required> CSE</label>
+        <label><input type="radio" name="branch" value="ISE"> ISE</label>
+        <label><input type="radio" name="branch" value="ECE"> ECE</label>
+        <label><input type="radio" name="branch" value="NCB"> NCB</label>
+      </div>
+
+      <label for="feedback">Feedback</label>
+      <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="copy"> Send me a copy</label>
+      </div>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <footer>JSS Science and Technology University</footer>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Frameset Example</title>
+</head>
+<frameset cols="20%,80%">
+  <frame src="nav.html" name="leftFrame">
+  <frame src="home.html" name="rightFrame">
+</frameset>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head><title>Navigation</title></head>
+<body>
+  <h3>Links</h3>
+  <ul>
+    <li><a href="home.html" target="rightFrame">Home</a></li>
+    <li><a href="about.html" target="rightFrame">About</a></li>
+    <li><a href="contact.html" target="rightFrame">Contact</a></li>
+  </ul>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head><title>Home</title></head>
+<body>
+  <h2>Welcome to the Home Page</h2>
+  <p>This is the default content.</p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head><title>About</title></head>
+<body>
+  <h2>About Us</h2>
+  <p>This is the about page.</p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head><title>Contact</title></head>
+<body>
+  <h2>Contact</h2>
+  <p>This is the contact page.</p>
+</body>
+</html>
+
+
+
+
+
+

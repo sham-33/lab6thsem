@@ -1,0 +1,228 @@
+
+<!-- 2. a) Create a form to collect Student feedback. (Use textbox, text area, checkbox, radio button, select box etc.).  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Feedback Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e9f3f3;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        margin: 50px auto;
+        width: 400px;
+        padding: 30px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-size: 14px;
+        margin-top: 10px;
+        display: block;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      select,
+      textarea {
+        font-size: 12px;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      .radio-group,
+      .checkbox-group {
+        margin: 10px 0;
+      }
+
+      .radio-group label,
+      .checkbox-group label {
+        display: block;
+        font-size: 13px;
+        margin: 5px 0;
+      }
+
+      input[type="submit"] {
+        font-size: 14px;
+        background-color: rgb(204, 222, 216);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: rgb(180, 205, 195);
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      marquee {
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Feedback Form</h1>
+      <form>
+        <label for="fname">Full Name:</label>
+        <input type="text" id="fname" name="fullname" placeholder="Your name" required />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="emailid" placeholder="Your E-mail id" required />
+
+        <label for="usn">USN:</label>
+        <input type="text" id="usn" name="USN" placeholder="Your USN" required />
+
+        <label for="sem">Select Semester:</label>
+        <select name="sem" id="sem" required>
+          <option value="">--Select--</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+
+        <label>Branch:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="branch" value="CS" required /> Computer Science and Engineering</label>
+          <label><input type="radio" name="branch" value="IS" /> Information Science</label>
+          <label><input type="radio" name="branch" value="EC" /> Electronics and Communication</label>
+          <label><input type="radio" name="branch" value="NCB" /> Non-Circuit Branch</label>
+        </div>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="6" placeholder="Your Feedback & Suggestions" required></textarea>
+
+        <div class="checkbox-group">
+          <label>
+            <input type="checkbox" id="req" name="req" />
+            Send me a copy of this feedback
+          </label>
+        </div>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <footer>
+      <marquee direction="left">&copy; JSS Science and Technology University</marquee>
+    </footer>
+  </body>
+</html>
+
+
+
+
+
+
+<!-- 2. b) Create a web page using frame. Divide the page into two parts with Navigation links on left-hand side of page (width=20%) and content page on right-hand side of page (width = 80%). On clicking the navigation Links corresponding content must be shown on the right-hand side. -->
+
+<!-- index.html -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Simple Frameset</title>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+<frameset cols="20%,80%">
+  <frame src="left.html" name="left">
+  <frame src="right.html" name="right">
+</frameset>
+<noframes>
+  <body>Your browser does not support frames.</body>
+</noframes>
+</html>
+
+
+<!-- left.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Navigation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 15px;
+    }
+
+    h3 {
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    a {
+      display: block;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+    }
+
+    a:hover {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h3>Web Links</h3>
+  <a href="https://jssstuniv.in" target="right">JSS STU</a>
+  <a href="https://en.wikipedia.org" target="right">Wikipedia</a>
+  <a href="https://en.wikipedia.org/wiki/Computer_science" target="right">CSE</a>
+</body>
+</html>
+
+
+<!-- right.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Select a Link</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <h2>Please choose a link from the left menu</h2>
+</body>
+</html>

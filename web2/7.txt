@@ -1,0 +1,270 @@
+<!-- 7. a) Develop a simple calculator for Addition, Subtraction, Multiplication, and Division operations using JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Calculator</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden; /* Prevent scrolling */
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+    }
+
+    .calculator {
+      background-color: #ffffff;
+      margin: 40px auto 0;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .calculator h2 {
+      color: #1e3a8a;
+      margin-bottom: 20px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .buttons {
+      margin-top: 10px;
+    }
+
+    .buttons button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 5px;
+      background-color: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 60px;
+    }
+
+    .buttons button:hover {
+      background-color: #1e40af;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #111827;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <h2>Simple Calculator</h2>
+    <input type="number" id="num1" placeholder="First Number">
+    <input type="number" id="num2" placeholder="Second Number">
+
+    <div class="buttons">
+      <button onclick="calculate('+')">+</button>
+      <button onclick="calculate('-')">−</button>
+      <button onclick="calculate('*')">×</button>
+      <button onclick="calculate('/')">÷</button>
+    </div>
+
+    <div id="result">Result: </div>
+  </div>
+
+  <script>
+    function calculate(op) {
+      const num1 = parseFloat(document.getElementById("num1").value);
+      const num2 = parseFloat(document.getElementById("num2").value);
+      let resultText = "Invalid input";
+
+      if (!isNaN(num1) && !isNaN(num2)) {
+        switch (op) {
+          case '+': resultText = num1 + num2; break;
+          case '-': resultText = num1 - num2; break;
+          case '*': resultText = num1 * num2; break;
+          case '/': resultText = num2 !== 0 ? num1 / num2 : "Cannot divide by zero"; break;
+        }
+      }
+
+      document.getElementById("result").innerText = "Result: " + resultText;
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+<!-- b) Create an HTML Page that contains a form with fields Name, Email, Mobile No, Gender, Favorite Color, and a button. Write a JavaScript code to validate all the fields when the button is clicked, later combine and display the information in a textbox. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Info Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .form-wrapper {
+      width: 100%;
+      max-width: 450px;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #007acc;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 3px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #005f99;
+    }
+
+    .output-box {
+      margin-top: 25px;
+      padding: 15px;
+      background: #f8f8f8;
+      border-left: 5px solid #007acc;
+      border-radius: 6px;
+      white-space: pre-wrap;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-wrapper">
+    <h2>Student Info Form</h2>
+    <form id="studentForm" onsubmit="return handleSubmit()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email">
+
+      <label for="mobile">Mobile No:</label>
+      <input type="tel" id="mobile" placeholder="10-digit number">
+
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="Male"> Male
+      <input type="radio" name="gender" value="Female"> Female
+
+      <label for="color">Favorite Color:</label>
+      <select id="color">
+        <option value="">--Select--</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+        <option value="Red">Red</option>
+        <option value="Black">Black</option>
+      </select>
+
+      <button class="submit-btn" type="submit">Submit</button>
+    </form>
+
+    <div id="result" class="output-box" style="display:none;"></div>
+  </div>
+
+  <script>
+    function handleSubmit() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const mobile = document.getElementById("mobile").value.trim();
+      const genderInput = document.querySelector('input[name="gender"]:checked');
+      const color = document.getElementById("color").value;
+      const resultBox = document.getElementById("result");
+
+      if (!name || !email || !mobile || !genderInput || !color) {
+        alert("Please fill all fields.");
+        return false;
+      }
+
+      if (!/^\d{10}$/.test(mobile)) {
+        alert("Mobile number must be exactly 10 digits.");
+        return false;
+      }
+
+      const output = `
+Name: ${name}
+Email: ${email}
+Mobile: ${mobile}
+Gender: ${genderInput.value}
+Favorite Color: ${color}
+      `.trim();
+
+      resultBox.textContent = output;
+      resultBox.style.display = "block";
+      return false; // prevent form submission
+    }
+  </script>
+</body>
+</html>

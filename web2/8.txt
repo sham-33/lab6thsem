@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Student Test Form</title>
+    <style type="text/css">
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background: #f2f4f8;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+      }
+
+      .form-container {
+        background-color: #fafafa;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+        margin-top: 40px;
+        width: 400px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+      }
+
+      label {
+        font-weight: 500;
+        display: block;
+        margin-bottom: 6px;
+        color: #222;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+
+      input[type="submit"] {
+        background-color: #007acc;
+        color: white;
+        padding: 10px 18px;
+        border: none;
+        border-radius: 6px;
+        font-size: 15px;
+        cursor: pointer;
+        display: block;
+        margin: auto;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #005ea3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="form-container">
+      <h2>Student Details Form</h2>
+      <form onsubmit="return computeAverage();" action="#" method="post">
+        <label for="regno">Registration Number:</label>
+        <input type="text" id="regno" name="regno" placeholder="Your USN" />
+
+        <label for="subcode">Subject Code:</label>
+        <input type="text" id="subcode" name="subcode" placeholder="Subject Code" />
+
+        <label for="test1">Test-1 Marks:</label>
+        <input type="text" id="test1" name="test1" placeholder="Test-1 marks" />
+
+        <label for="test2">Test-2 Marks:</label>
+        <input type="text" id="test2" name="test2" placeholder="Test-2 marks" />
+
+        <label for="test3">Test-3 Marks:</label>
+        <input type="text" id="test3" name="test3" placeholder="Test-3 marks" />
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <script type="text/javascript">
+      function computeAverage() {
+        var reg = document.getElementById("regno").value.trim();
+        var sub = document.getElementById("subcode").value.trim();
+        var t1 = document.getElementById("test1").value.trim();
+        var t2 = document.getElementById("test2").value.trim();
+        var t3 = document.getElementById("test3").value.trim();
+
+        if (!reg || !sub || !t1 || !t2 || !t3) {
+          alert("Please fill in all fields.");
+          return false;
+        }
+
+        t1 = parseFloat(t1);
+        t2 = parseFloat(t2);
+        t3 = parseFloat(t3);
+
+        if (
+          isNaN(t1) || isNaN(t2) || isNaN(t3) ||
+          t1 < 0 || t1 > 100 ||
+          t2 < 0 || t2 > 100 ||
+          t3 < 0 || t3 > 100
+        ) {
+          alert("Enter valid marks between 0 and 100.");
+          return false;
+        }
+
+        var scores = [t1, t2, t3].sort(function(a, b) { return b - a; });
+        var avg = (scores[0] + scores[1]) / 2;
+        alert("Average of Best Two Tests: " + avg.toFixed(2));
+        return false;
+      }
+    </script>
+  </body>
+</html>

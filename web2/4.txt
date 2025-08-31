@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume - Yashwanth A L</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+        padding: 20px;
+        color: #333;
+      }
+
+      .resume {
+        max-width: 800px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 28px;
+      }
+
+      header p a {
+        margin: 0 5px;
+        text-decoration: none;
+        color: #007acc;
+      }
+
+      section {
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        color: #333;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+      }
+
+      .date {
+        float: right;
+        font-style: italic;
+        color: #666;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      a {
+        color: #007acc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume">
+      <header>
+        <h1>Yashwanth A L</h1>
+        <p>
+          📞 9844955914 |
+          <a href="mailto:yashwanthal2004@gmail.com">yashwanthal2004@gmail.com</a>
+          | <a href="#">GitHub</a> | <a href="#">LinkedIn</a> | <a href="#">LeetCode</a>
+        </p>
+      </header>
+
+      <section>
+        <h2>Professional Experience</h2>
+        <p>
+          <strong>R&D Intern – Schneider Electric</strong>
+          <span class="date">May 2025 – Present</span>
+        </p>
+        <p>
+          <a href="#">Microgrid Solutions</a>: Contributing to R&D projects in
+          Microgrid technologies involving software, embedded systems, and
+          energy management.
+        </p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <strong>JSS Science and Technology University (SJCE)</strong>,
+            2022–2026 – 9.47 CGPA<br />
+            Mysore, Karnataka
+          </li>
+          <li>
+            <em>Sri Ramakrishna Vidyashala, Mysuru</em>, 2020–2022 – 97.66%
+          </li>
+          <li>
+            <em>Sri Ramakrishna Vidyashala, Mysuru</em>, 2017–2020 – 96.96%
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <p><strong>Languages:</strong> C, Java, Python, JavaScript</p>
+        <p><strong>Web:</strong> HTML5, CSS3, React, Bootstrap, Tailwind CSS</p>
+        <p><strong>Back-End:</strong> Node.js, Express.js</p>
+        <p><strong>Databases:</strong> SQL, PostgreSQL</p>
+        <p><strong>Problem-Solving:</strong> DSA, debugging, optimization</p>
+        <p><strong>Languages Known:</strong> Kannada, English, Hindi</p>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Blog Website (MERN Stack)</strong> – In Progress</li>
+          <p>Blog website with admin CRUD and user reading functionality using MERN stack.</p>
+
+          <li><strong><a href="#">Tic-Tac-Toe Game</a></strong></li>
+          <p>Interactive game using HTML, CSS, JavaScript with win detection.</p>
+
+          <li><strong><a href="#">Simon Game</a></strong></li>
+          <p>Game with smooth interaction using JS, HTML, CSS.</p>
+        </ul>
+        <p>View more: <a href="#">GitHub Profile</a></p>
+      </section>
+    </div>
+  </body>
+</html>
