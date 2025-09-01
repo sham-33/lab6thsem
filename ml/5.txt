@@ -29,3 +29,5 @@ def alphabeta(depth, index, is_max, scores, max_depth, alpha, beta):
 # Example input
 scores = [3, 5, 6, 9, 1, 2, 0, -1]
 depth = 3
+
+print("The result of the alphabeta pruning is:", alphabeta(0, 0, True, scores, depth, float('-inf'), float('inf')))
