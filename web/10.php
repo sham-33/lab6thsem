@@ -1,3 +1,5 @@
+<!-- 10. a) Write a PHP script to display today’s date in dd-mm-yyyy format.  -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +25,7 @@
     <span class="date">
       <?php
       // Display today's date in dd-mm-yyyy format
-      echo date("d-m-Y");
+      echo date("d-m-Y : H-i-s");
       ?>
     </span>
   </h1>
@@ -31,7 +33,10 @@
 
 </html>
 
+<!-- 
 
+10 b) Write a PHP script to check whether the number is prime or not when the user inputs a valid number from the client side. -->
+-->
 
 <!DOCTYPE html>
 <html>
@@ -44,28 +49,33 @@
   <h1>Prime Number Checker</h1>
   <form method="POST">
     <label>Number</label>
-    <input name="num" required />
+    <input name="num" type="number" required />
     <button type="submit">Check!</button>
   </form>
   <p>
     <?php
+    function isPrime($num)
+    {
+      if ($num <= 1)
+        return false;
+      if ($num == 2)
+        return true;
+      for ($i = 2; $i <= sqrt($num); $i++) {
+        if ($num % $i == 0)
+          return false;
+      }
+      return true;
+    }
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $num = $_POST["num"];
       if ($num == 1 || $num == 0) {
-        echo "The number $num is neither prime nor not prime";
-        return;
-      }
-      $flag = 0;
-      for ($i = 2; $i <= sqrt($num); $i++) {
-        if ($num % $i == 0) {
-          $flag = 1;
-          break;
-        }
-      }
-      if ($flag == 1)
-        echo "The number $num is not a prime number";
-      else
+        echo "The number $num is neither prime nor composite";
+      } else if (isPrime($num)) {
         echo "The number $num is a prime number";
+      } else {
+        echo "The number $num is not a prime number";
+      }
     }
     ?>
   </p>
