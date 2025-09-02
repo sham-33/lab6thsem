@@ -67,24 +67,24 @@
   <body>
     <div class="resume">
       <header>
-        <h1>T N Shambulinga</h1>
+        <h1>Name</h1>
         <p>
-          📞 9007440583 |
-          <a href="mailto:shambutn@gmail.com">shambutn@gmail.com</a>
-          | <a href="#">GitHub</a> | <a href="#">LinkedIn</a> | <a href="#">LeetCode</a>
+          📞 1234543212 |
+          <a href="mailto:temp@gmail.com">temp@gmail.com</a>
+          | <a href="#">GitHub</a> | <a href="#">LinkedIn</a> |
+          <a href="#">LeetCode</a>
         </p>
       </header>
 
       <section>
         <h2>Professional Experience</h2>
         <p>
-          <strong>SDE Intern – Microsoft</strong>
+          <strong>SDE Intern – ABC Company</strong>
           <span class="date">May 2025 – Present</span>
         </p>
         <p>
-          Contributing to SDE projects in
-          Microsoft technologies involving software, embedded systems, and
-          energy management.
+          Contributing to SDE projects in Microsoft technologies involving
+          software, embedded systems, and energy management.
         </p>
       </section>
 
@@ -93,14 +93,16 @@
         <ul>
           <li>
             <strong>JSS Science and Technology University (SJCE)</strong>,
-            2022–2026 – 8.71 CGPA<br />
+            2022–2026 – 9.12 CGPA<br />
             Mysore, Karnataka
           </li>
           <li>
-            <em>Pupil Tree, Ballari</em>, 2020–2022 – 93.33%
+            <strong>Government PU College</strong>, 2020–2022 – 90%<br />
+            Manglore, Karnataka
           </li>
           <li>
-            <em>SNRPS, Ballari</em>, 2017–2020 – 91.4%
+            <strong>ABC HighSchool</strong>, 2020 – 94%<br />
+            Manglore, Karnataka
           </li>
         </ul>
       </section>
@@ -119,15 +121,23 @@
         <h2>Projects</h2>
         <ul>
           <li><strong>Health care Website (MERN Stack)</strong></li>
-          <p>HealthCare website with admin CRUD and user reading functionality using MERN stack.</p>
+          <p>
+            HealthCare website with admin CRUD and user reading functionality
+            using MERN stack.
+          </p>
 
-          <li><strong><a href="#">Tic-Tac-Toe Game</a></strong></li>
-          <p>Interactive game using HTML, CSS, JavaScript with win detection.</p>
+          <li>
+            <strong><a href="#">Tic-Tac-Toe Game</a></strong>
+          </li>
+          <p>
+            Interactive game using HTML, CSS, JavaScript with win detection.
+          </p>
 
-          <li><strong><a href="#">Simon Game</a></strong></li>
+          <li>
+            <strong><a href="#">Simon Game</a></strong>
+          </li>
           <p>Game with smooth interaction using JS, HTML, CSS.</p>
         </ul>
-        <p>View more: <a href="#">GitHub Profile</a></p>
       </section>
     </div>
   </body>

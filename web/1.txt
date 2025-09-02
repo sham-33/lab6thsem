@@ -10,28 +10,11 @@
         padding: 20px;
         background: #fff;
         color: #000;
-        position: relative;
-        min-height: 100vh;
-      }
-
-      .watermark {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 0;
-        pointer-events: none;
-        opacity: 0.08;
-        background: url("logo.png") center center no-repeat;
-        background-size: 400px 400px;
       }
 
       .container {
         max-width: 800px;
         margin: auto;
-        position: relative;
-        z-index: 1;
       }
 
       h2,
@@ -58,19 +41,9 @@
         padding: 6px;
         text-align: center;
       }
-
-      th {
-        background: #eee;
-      }
-
-      .highlight {
-        font-weight: bold;
-        font-style: italic;
-      }
     </style>
   </head>
   <body>
-    <div class="watermark"></div>
     <div class="container">
       <h2>JSS SCIENCE AND TECHNOLOGY UNIVERSITY</h2>
       <h3>Department of CSE - VI Sem Timetable (2024-25)</h3>
@@ -159,7 +132,7 @@
           <td></td>
           <td></td>
           <td></td>
-          <td colspan="2" class="highlight">IoT Lab E1</td>
+          <td colspan="2">IoT Lab E1</td>
         </tr>
         <tr>
           <td>Sat</td>
@@ -172,63 +145,6 @@
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
-        </tr>
-      </table>
-
-      <h3>Subject Details</h3>
-      <table>
-        <tr>
-          <th>Code</th>
-          <th>Title</th>
-          <th>Credits</th>
-          <th>Instructor</th>
-        </tr>
-        <tr>
-          <td>20CS610</td>
-          <td>Machine Learning</td>
-          <td>4</td>
-          <td>Prof. Rakshitha R</td>
-        </tr>
-        <tr>
-          <td>20CS620</td>
-          <td>Web Technology</td>
-          <td>3</td>
-          <td>Prof. Savitha N</td>
-        </tr>
-        <tr>
-          <td>20CS630</td>
-          <td>Internet of Things</td>
-          <td>3</td>
-          <td>Prof. Shwethashree GC</td>
-        </tr>
-        <tr>
-          <td>20CS641 / 643</td>
-          <td>Cloud / Cyber Security</td>
-          <td>3</td>
-          <td>Various</td>
-        </tr>
-        <tr>
-          <td>20CS67L</td>
-          <td>ML Lab</td>
-          <td>1.5</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>20CS68L</td>
-          <td>WT Lab</td>
-          <td>1.5</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>20CS630P</td>
-          <td>IoT Lab</td>
-          <td>1</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <th colspan="2">Total Credits</th>
-          <td>23</td>
           <td></td>
         </tr>
       </table>

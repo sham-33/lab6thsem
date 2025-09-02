@@ -2,9 +2,9 @@
 <html>
   <head>
     <title>Student Test Form</title>
-    <style type="text/css">
+    <style>
       body {
-        font-family: 'Segoe UI', sans-serif;
+        font-family: "Segoe UI", sans-serif;
         background: #f2f4f8;
         margin: 0;
         padding: 0;
@@ -18,8 +18,8 @@
         background-color: #fafafa;
         padding: 30px 40px;
         border-radius: 12px;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
         margin-top: 40px;
+        border: 2px solid black;
         width: 400px;
       }
 
@@ -71,7 +71,12 @@
         <input type="text" id="regno" name="regno" placeholder="Your USN" />
 
         <label for="subcode">Subject Code:</label>
-        <input type="text" id="subcode" name="subcode" placeholder="Subject Code" />
+        <input
+          type="text"
+          id="subcode"
+          name="subcode"
+          placeholder="Subject Code"
+        />
 
         <label for="test1">Test-1 Marks:</label>
         <input type="text" id="test1" name="test1" placeholder="Test-1 marks" />
@@ -86,7 +91,7 @@
       </form>
     </div>
 
-    <script type="text/javascript">
+    <script>
       function computeAverage() {
         var reg = document.getElementById("regno").value.trim();
         var sub = document.getElementById("subcode").value.trim();
@@ -104,19 +109,23 @@
         t3 = parseFloat(t3);
 
         if (
-          isNaN(t1) || isNaN(t2) || isNaN(t3) ||
-          t1 < 0 || t1 > 100 ||
-          t2 < 0 || t2 > 100 ||
-          t3 < 0 || t3 > 100
+          isNaN(t1) ||
+          isNaN(t2) ||
+          isNaN(t3) ||
+          t1 < 0 ||
+          t1 > 100 ||
+          t2 < 0 ||
+          t2 > 100 ||
+          t3 < 0 ||
+          t3 > 100
         ) {
           alert("Enter valid marks between 0 and 100.");
-          return false;
+          return;
         }
 
-        var scores = [t1, t2, t3].sort(function(a, b) { return b - a; });
-        var avg = (scores[0] + scores[1]) / 2;
+        var scores = [t1, t2, t3].sort();
+        var avg = (scores[1] + scores[2]) / 2;
         alert("Average of Best Two Tests: " + avg.toFixed(2));
-        return false;
       }
     </script>
   </body>
