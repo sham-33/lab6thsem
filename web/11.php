@@ -49,7 +49,7 @@
             $file = fopen("form.txt", "a"); 
             fwrite($file, $info . "\n");
             fclose($file);
-            echo "<script>alert('Information submitted successfully!\\n" . htmlspecialchars($info) . "');</script>";
+            echo "<script>alert('Information submitted successfully!;</script>";
         } else {
             // Display an error message in an alert if information is empty
             echo "<script>alert('Please enter some information!');</script>";
